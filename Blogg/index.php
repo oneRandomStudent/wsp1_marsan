@@ -29,6 +29,7 @@ elseif($page == "blogg") {
 	$post = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_URL);
 //array_key_exists använder sig av all keys som finns all-blog-post och den gör det enklar med att kan bara nämn $title istället för $value['title'].
 	if (array_key_exists($post, $model)) {
+		$postID = $post;
 		$title = $model[$post]['title'];
 		$author = $model[$post]['author'];
 		$date = $model[$post]['date'];
@@ -39,11 +40,16 @@ elseif($page == "blogg") {
 	elseif (!empty($post)) {
 		$template = 'page';
 		$content = 'Den sökta sidan finns inte';
+		$header = 'ERROR - 404';
 	}
+}
+elseif($page == "post") {
+	$header = 'Nytt inlägg';
+	$template = 'posta';
 }
 elseif($page == "kontakt") {
 	$header = 'Kontakt';
-	$content = '<div class="content">Du når oss på epost@labb2.se</div>';
+	$content = 'Du når oss på epost@labb2.se';
 }
 else {
 	echo "Den sökta sidan finns inte";

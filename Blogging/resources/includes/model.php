@@ -36,7 +36,17 @@
 // echo count($internet, COUNT_RECURSIVE);
 // echo count($internet);
 
-//2D Associative array for full posts - Övning 9
+// 2D Associative array for full posts - Övning 9
+// Nedan följer enkel pseudokod
+// Array innehållande arrayer med individuell information
+/*
+    model
+        länken (identifikator)
+            Tittel
+            Författare
+            Datum
+            Testen
+*/
 
 $model = array (
     'forsta-inlagget' => array(

@@ -7,7 +7,8 @@ require ('resources/views/header.php');
 
 navigation($header);
 
-//Content
+//CONTENT
+// det här är länk  att med läs mer länken.
 echo <<<CONTENT
 <div class="content">
     <h2>{$title}</h2>
